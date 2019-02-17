@@ -25,9 +25,9 @@ ffmpeg -framerate 12 -s 1080x1440 -f image2 -pattern_type glob -i 'output/aligne
 
 ----
 References:
-[1] http://cmp.felk.cvut.cz/~uricamic/clandmark/index.php?page=installation
-[2] https://www.learnopencv.com/install-opencv-docker-image-ubuntu-macos-windows/
-[3] https://github.com/spmallick/dlib/blob/master/python_examples/face_landmark_detection_to_file.py
+- [1] http://cmp.felk.cvut.cz/~uricamic/clandmark/index.php?page=installation
+- [2] https://www.learnopencv.com/install-opencv-docker-image-ubuntu-macos-windows/
+- [3] https://github.com/spmallick/dlib/blob/master/python_examples/face_landmark_detection_to_file.py
 
 
 # Arno Klein, 2019-02-14, Apache v2.0 License
