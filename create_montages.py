@@ -2,7 +2,7 @@
 #
 # Make a movie from the results with ffmpeg or other programs
 # https://www.ffmpeg.org/ffmpeg.html#Video-and-Audio-file-format-conversion
-# ffmpeg -framerate 12 -s 1080x810 -f image2 -pattern_type glob -i 'output/montages/*.jpg' -vcodec libx264 -crf 20 -pix_fmt yuv420p ellora_2x2montage_timelapse_20190128_1080x810_12fps.mp4
+# ffmpeg -framerate 12 -s 1080x810 -f image2 -i 'output/montages/montage%d.jpg' -vcodec libx264 -crf 20 -pix_fmt yuv420p ellora_2x2montage_timelapse_20190128_1080x810_12fps.mp4
 #
 # Arno Klein, 2019-02-19
 
