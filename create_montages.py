@@ -21,20 +21,25 @@ parser = argparse.ArgumentParser(description="""
 parser.add_argument("OUT_DIR", help=("directory containing output files"))
 args = parser.parse_args()
 OUT_DIR = args.OUT_DIR
-IMAGE_DIR = os.path.join("output", "aligned")
+IMAGE_DIR = os.path.join(OUT_DIR, "aligned")
 IMAGE_LIST = os.listdir(IMAGE_DIR)
 IMAGE_LIST = [x for x in IMAGE_LIST if os.path.splitext(x)[1] == '.jpg']
 IMAGE_LIST.sort()
-MONTAGE_DIR = os.path.join("output", "montages")
+MONTAGE_DIR = os.path.join(OUT_DIR, "montages")
 cmd = 'mkdir {0}'.format(MONTAGE_DIR)
 print(cmd)
 os.system(cmd)
 
 # Settings
-n = 2
-N = 4
-xdim = 405
-ydim = 540
+n = 3
+if n == 2:
+    xdim = 405
+    ydim = 540
+elif n == 3:
+    xdim = 270
+    ydim = 360
+
+N = n**2
 
 # Build montages
 i = 0
