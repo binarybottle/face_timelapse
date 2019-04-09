@@ -17,6 +17,9 @@ parser = argparse.ArgumentParser(description="""
                                  formatter_class=lambda prog:
                                  argparse.HelpFormatter(prog,
                                                         max_help_position=40))
+
+n = 2
+
 # Folders
 parser.add_argument("OUT_DIR", help=("directory containing output files"))
 args = parser.parse_args()
@@ -25,13 +28,12 @@ IMAGE_DIR = os.path.join(OUT_DIR, "aligned")
 IMAGE_LIST = os.listdir(IMAGE_DIR)
 IMAGE_LIST = [x for x in IMAGE_LIST if os.path.splitext(x)[1] == '.jpg']
 IMAGE_LIST.sort()
-MONTAGE_DIR = os.path.join(OUT_DIR, "montages")
+MONTAGE_DIR = os.path.join(OUT_DIR, "montages"+str(n)+"x"+str(n))
 cmd = 'mkdir {0}'.format(MONTAGE_DIR)
 print(cmd)
 os.system(cmd)
 
 # Settings
-n = 3
 if n == 2:
     xdim = 405
     ydim = 540
